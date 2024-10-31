@@ -17,4 +17,15 @@ func main() {
 	}
 
 	fmt.Println(grade)
+
+	const address string = "nusantara"
+
+	switch address {
+	case "nusantara":
+		fmt.Println("Address is Nusantara")
+	case "jakarta":
+		fmt.Println("Address iS Jakarta")
+	default:
+		fmt.Println("Address is not Nusantara or Jakarta")
+	}
 }
