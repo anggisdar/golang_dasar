@@ -21,4 +21,10 @@ func main() {
 		fmt.Println(sparepart)
 	}
 
+	// ini byte
+	byteArray := []byte("ini byte")
+	for _, byteArr := range byteArray {
+		fmt.Println(byteArr)
+	}
+
 }
