@@ -1,3 +1,6 @@
 # Learn Scope
 
-scope dibagi menjadi 3 scope 
+publik scope
+lokal scope
+blok acope
+

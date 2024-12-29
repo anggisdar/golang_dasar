@@ -3,7 +3,7 @@ package scope
 import "fmt"
 
 //variable global yang bisa diakses publik
-var GlobalVar = "Saya Publik"
+var globalVar = "Saya Publik"
 
 //variable yang "hanya" bisa diakses lokal dalam fungsi
 func main() {
