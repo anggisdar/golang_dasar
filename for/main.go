@@ -28,5 +28,10 @@ func main() {
 		if letterString == "a" || letterString == "i" || letterString == "u" || letterString == "e" || letterString == "0" {
 			fmt.Println("index:", index, "letter:", string(letter))
 		}
+
+		switch letterString {
+		case "a", "i", "u", "e", "o":
+			fmt.Println("index:", index, "letter:", string(letter))
+		}
 	}
 }
