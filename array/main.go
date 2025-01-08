@@ -21,6 +21,12 @@ func main() {
 		fmt.Println(sparepart)
 	}
 
+	//slice append
+	var console []string
+	console = append(console, "psp")
+
+	fmt.Println(console)
+
 	// ini byte
 	byteArray := []byte("ini byte")
 	for _, byteArr := range byteArray {
