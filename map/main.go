@@ -28,4 +28,11 @@ func main() {
 		fmt.Println("key:", key, "value:", value)
 	}
 
+	var mymap map[string]int
+	mymap = map[string]int{}
+
+	mymap["ruby"] = 9
+	mymap["javascript"] = 8
+
+	fmt.Println(mymap)
 }
