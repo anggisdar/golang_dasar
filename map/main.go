@@ -26,13 +26,12 @@ func main() {
 
 	for key, value := range myMap {
 		fmt.Println("key:", key, "value:", value)
+
 	}
 
-	var mymap map[string]int
-	mymap = map[string]int{}
+	// menampilkan nilai yang tidak ada dengan bool
+	value, isAvailable := myMap["php"]
+	fmt.Println(isAvailable)
+	fmt.Println(value)
 
-	mymap["ruby"] = 9
-	mymap["javascript"] = 8
-
-	fmt.Println(mymap)
 }
