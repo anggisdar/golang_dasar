@@ -6,36 +6,45 @@ import (
 
 func main() {
 	// "function string"
-	// printMyResult("saya sedang")
-	// printMyResult("belajar golang")
+	/* printMyResult("saya sedang")
+	printMyResult("belajar golang")*/
 
 	// "function int"
 	result := add(10, 20)
 	fmt.Println(result)
 
+	//mengembalikan nilai lebih dari satu
 	luas, keliling := calculate(10, 20)
 	fmt.Println(luas)
 	fmt.Println(keliling)
 
-	// sentence := printMyResult("saya sedang")
-	// fmt.Println(sentence)
+	/* sentence := printMyResult("saya sedang")
+	fmt.Println(sentence)*/
 }
 
 // pemanggilan yang berada di satu package main dengan awalan huruf kecil
-// func add(number int, numberTwo int) int {
-// 	result := number + numberTwo
-// 	return result
+/* func add(number int, numberTwo int) int {
+result := number + numberTwo
+return result */
 
 // lebih clean code langsung dilakukan pemangilan "return" tanpa harus dideklarasikan ulang
 func add(number int, numberTwo int) int {
 	return number + numberTwo
 }
 
-func calculate(panjang int, lebar int) (int, int) {
-	luas := panjang * lebar
-	keliling := 2 * (panjang * lebar)
+// mengembalikan nilai lebih dari satu
+/*func calculate(panjang int, lebar int) (int, int) {
+luas := panjang * lebar
+keliling := 2 * (panjang * lebar)
 
-	return luas, keliling
+return luas, keliling*/
+
+// function dengan predefined return value
+func calculate(panjang int, lebar int) (luas int, keliling int) {
+	luas = panjang * lebar
+	keliling = 2 * (panjang + lebar)
+
+	return
 }
 
 // func printMyResult(sentence string) {
