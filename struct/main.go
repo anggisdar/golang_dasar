@@ -7,6 +7,14 @@ type employee struct {
 	age  int
 }
 
+type User struct {
+	ID        int
+	FirstName string
+	LastName  string
+	Email     string
+	IsActive  bool
+}
+
 func main() {
 	employee1 := employee{
 		name: "ujek",
@@ -22,4 +30,14 @@ func main() {
 	fmt.Println("--------------------------")
 	fmt.Println("Name: ", employee2.name)
 	fmt.Println("age: ", employee2.age)
+
+	user := User{}
+	user.ID = 1
+	user.FirstName = "james"
+	user.LastName = "bond"
+	user.Email = "jamesbond@james.com"
+	user.IsActive = true
+
+	fmt.Println(user)
+
 }
