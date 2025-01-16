@@ -2,11 +2,6 @@ package main
 
 import "fmt"
 
-type employee struct {
-	name string
-	age  int
-}
-
 type User struct {
 	ID        int
 	FirstName string
@@ -16,21 +11,8 @@ type User struct {
 }
 
 func main() {
-	employee1 := employee{
-		name: "ujek",
-		age:  24,
-	}
 
-	employee2 := employee{}
-	employee2.name = "arga"
-	employee2.age = 23
-
-	fmt.Println("Name: ", employee1.name)
-	fmt.Println("age: ", employee1.age)
-	fmt.Println("--------------------------")
-	fmt.Println("Name: ", employee2.name)
-	fmt.Println("age: ", employee2.age)
-
+	// cara 1
 	user := User{}
 	user.ID = 1
 	user.FirstName = "james"
@@ -40,4 +22,23 @@ func main() {
 
 	fmt.Println(user)
 
+	//cara 2 horizontal mirip map
+	userTwo := User{ID: 2, FirstName: "jack", LastName: "chan", Email: "jackchan@jack.co.id", IsActive: true}
+	fmt.Println(userTwo)
+
+	// cara 3 vertikal "urutannya bisa acak"
+	userThree := User{
+		Email:     "jacksparrow@jack.xyz",
+		ID:        3,
+		FirstName: "jack",
+		LastName:  "sparrow",
+		IsActive:  true,
+	}
+
+	fmt.Println(userThree)
+
+	// cara 4 syarat harus id yang pertama
+	userFour := User{4, "jack", "ma", "jackma@jack.org", true}
+
+	fmt.Println(userFour)
 }
