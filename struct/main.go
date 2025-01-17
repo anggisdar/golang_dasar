@@ -39,6 +39,15 @@ func main() {
 
 	// cara 4 syarat harus id yang pertama
 	userFour := User{4, "jack", "ma", "jackma@jack.org", true}
+	// fmt.Println(userFour)
 
-	fmt.Println(userFour)
+	displayUser := displayUser(userFour)
+	fmt.Println(displayUser)
+
+}
+
+// struct sebagai parameter
+func displayUser(user User) string {
+	result := fmt.Sprintf("Name : %s %s, Email : %s", user.FirstName, user.LastName, user.Email)
+	return result
 }
