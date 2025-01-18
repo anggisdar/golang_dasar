@@ -10,6 +10,14 @@ type User struct {
 	IsActive  bool
 }
 
+//embedded struct
+type Group struct {
+	Name        string
+	Admin       User
+	Users       []User
+	IsAvailable bool
+}
+
 func main() {
 
 	// cara 1
@@ -38,11 +46,25 @@ func main() {
 	fmt.Println(userThree)
 
 	// cara 4 syarat harus id yang pertama
-	userFour := User{4, "jack", "ma", "jackma@jack.org", true}
+	user4 := User{4, "jack", "ma", "jackma@jack.org", true}
+	user5 := User{2, "jack", "aa", "jackma@jack.org", true}
 	// fmt.Println(userFour)
 
-	displayUser := displayUser(userFour)
-	fmt.Println(displayUser)
+	// displayUser := displayUser(userFour)
+	// fmt.Println(displayUser)
+
+	//embedded struct
+	users := []User{user4, user5}
+	group := Group{"Gamer", user, users, true}
+
+	displayGroup(group)
+}
+
+//embedded struct
+func displayGroup(group Group) {
+	fmt.Printf("Name: %s", group.Name)
+	fmt.Println("")
+	fmt.Printf("Member count : %d", len(group.Users))
 
 }
 
