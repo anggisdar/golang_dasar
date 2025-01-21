@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	//array
+	//slice
 	value := []int{80, 70, 60, 50, 40}
 	total := sum(value)
 	fmt.Println(total)
