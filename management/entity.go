@@ -15,3 +15,10 @@ type Group struct {
 	Users       []User
 	IsAvailable bool
 }
+
+// struct pointer
+type Employee struct {
+	ID   int
+	Name string
+	GPA  float32
+}
