@@ -19,21 +19,21 @@ func main() {
 
 	// fmt.Println(result)
 	// cara 1
-	user := management.User{}
+	/*user := management.User{}
 	user.ID = 1
 	user.FirstName = "james"
 	user.LastName = "bond"
 	user.Email = "jamesbond@james.com"
 	user.IsActive = true
 
-	fmt.Println(user)
+	fmt.Println(user)*/
 
 	//cara 2 horizontal mirip map
-	userTwo := management.User{ID: 2, FirstName: "jack", LastName: "chan", Email: "jackchan@jack.co.id", IsActive: true}
-	fmt.Println(userTwo)
+	/*userTwo := management.User{ID: 2, FirstName: "jack", LastName: "chan", Email: "jackchan@jack.co.id", IsActive: true}
+	fmt.Println(userTwo)*/
 
 	// cara 3 vertikal "urutannya bisa acak"
-	userThree := management.User{
+	/*userThree := management.User{
 		Email:     "jacksparrow@jack.xyz",
 		ID:        3,
 		FirstName: "jack",
@@ -41,33 +41,45 @@ func main() {
 		IsActive:  true,
 	}
 
-	fmt.Println(userThree)
+	fmt.Println(userThree)*/
 
 	// cara 4 syarat harus id yang pertama
-	user4 := management.User{4, "jack", "ma", "jackma@jack.org", true}
+	/*user4 := management.User{4, "jack", "ma", "jackma@jack.org", true}
 	user5 := management.User{2, "jack", "aa", "jackma@jack.org", true}
 	// fmt.Println(userFour)
 
 	// displayUser := displayUser(userFour)
-	// fmt.Println(displayUser)
+	// fmt.Println(displayUser)*/
 
 	//embedded struct
-	users := []management.User{user4, user5}
+	/*users := []management.User{user4, user5}
 	group := management.Group{"Gamer", user, users, true}
 
-	displayGroup(group)
+	displayGroup(group)*/
+
+	//struct pointer
+	employee := management.Employee{1, "Anggis Darmawan", 81}
+	fmt.Println(employee.Name)
+	emp(&employee) // referece
+	fmt.Println(employee.Name)
 }
 
 // embedded struct
-func displayGroup(group management.Group) {
+/*func displayGroup(group management.Group) {
 	fmt.Printf("Name: %s", group.Name)
 	fmt.Println("")
 	fmt.Printf("Member count : %d", len(group.Users))
 
-}
+}*/
 
 // struct sebagai parameter
-func displayUser(user management.User) string {
+/*func displayUser(user management.User) string {
 	return fmt.Sprintf("Name : %s %s, Email : %s", user.FirstName, user.LastName, user.Email)
 
+}*/
+
+// struct pointer
+func emp(employee *management.Employee) { // dereference
+	employee.Name = employee.Name + " Backend Developer Enthusiast"
+	fmt.Println(employee.Name)
 }
