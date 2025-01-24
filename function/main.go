@@ -10,16 +10,31 @@ func main() {
 	printMyResult("belajar golang")*/
 
 	// "function int"
-	result := add(10, 20)
-	fmt.Println(result)
+	/*result := add(10, 20)
+	fmt.Println(result)*/
 
 	//mengembalikan nilai lebih dari satu
-	luas, keliling := calculate(10, 20)
+	/*luas, keliling := calculate(10, 20)
 	fmt.Println(luas)
-	fmt.Println(keliling)
+	fmt.Println(keliling)*/
 
 	/* sentence := printMyResult("saya sedang")
 	fmt.Println(sentence)*/
+
+	result := amount(1, 2, 3, 4)
+	fmt.Println("value:", result)
+
+}
+
+// fungsi variadic menerima parameter ...int (elipsis)
+func amount(number ...int) int {
+	fmt.Printf("tipe data 'angka': %T\n", number)
+	result := 0
+	for _, value := range number {
+		result += value
+	}
+	return result
+
 }
 
 // pemanggilan yang berada di satu package main dengan awalan huruf kecil
