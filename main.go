@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
-	// "pertama/calculation"
 	"pertama/management"
+	"pertama/pointerstruct"
 )
+
+// "pertama/calculation"
 
 func main() {
 
@@ -58,10 +59,19 @@ func main() {
 	displayGroup(group)*/
 
 	//struct pointer
-	employee := management.Employee{1, "Anggis Darmawan", 81}
-	fmt.Println(employee.Name)
-	emp(&employee) // referece
-	fmt.Println(employee.Name)
+	employee := &management.Employee{
+		Name: "Anggis",
+		Role: "Backend Devloper Enthusiast",
+	}
+
+	// //memanggil fungsi di PrintUser
+	// pointerstruct.PrintEmployee(employee)
+
+	// //mengupdate nilai employee dari "pertama/pointerstruct"
+	// pointerstruct.UpdateEmployee(employee, "jhon doe", "engineer")
+
+	// menampilkan hasil
+	pointerstruct.PrintEmployee(employee)
 }
 
 // embedded struct
@@ -77,9 +87,3 @@ func main() {
 	return fmt.Sprintf("Name : %s %s, Email : %s", user.FirstName, user.LastName, user.Email)
 
 }*/
-
-// struct pointer
-func emp(employee *management.Employee) { // dereference
-	employee.Name = employee.Name + " Backend Developer Enthusiast"
-	fmt.Println(employee.Name)
-}
