@@ -18,7 +18,6 @@ type Group struct {
 
 // struct pointer
 type Employee struct {
-	ID   int
-	Name string
-	GPA  float32
+	ID         int
+	Name, Role string
 }
